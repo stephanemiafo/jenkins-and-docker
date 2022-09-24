@@ -22,5 +22,5 @@ ENTRYPOINT [ "/usr/sbin/httpd" ]
 
 # we don't want the container to exit (Similar to systemctl enable httpd)
 # run the container in the background
-CMD [ "-D", "FOREGROUND" ]
+CMD [ "httpd", "-g", "daemon off;" ]
 
